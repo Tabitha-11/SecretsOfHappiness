@@ -8,13 +8,13 @@ const financeSlider = document.getElementById("Finance");
 const submit = document.getElementById("Submit");
 
 
-var friendsOutput = document.getElementById("demo1");
-var familyOutput = document.getElementById("demo2");
-var fieldOutput = document.getElementById("demo3");
-var funOutput = document.getElementById("demo4");
-var fitnessOutput = document.getElementById("demo5");
-var faithOutput = document.getElementById("demo6");
-var financeOutput = document.getElementById("demo7");
+const friendsOutput = document.getElementById("demo1");
+const familyOutput = document.getElementById("demo2");
+const fieldOutput = document.getElementById("demo3");
+const funOutput = document.getElementById("demo4");
+const fitnessOutput = document.getElementById("demo5");
+const faithOutput = document.getElementById("demo6");
+const financeOutput = document.getElementById("demo7");
 
 friendsOutput.innerHTML = friendsSlider.value;
 familyOutput.innerHTML = familySlider.value;
@@ -25,13 +25,13 @@ faithOutput.innerHTML = faith.value;
 financeOutput.innerHTML = financeSlider.value;
 
 const STHObject = {
-    friends:"5",
-    family:"5",
-    field:"5",
-    fun:"5",
-    fitness:"5",
-    faith:"5",
-    finance:"5"
+    friends: "5",
+    family: "5",
+    field: "5",
+    fun: "5",
+    fitness: "5",
+    faith: "5",
+    finance: "5"
 };
 
 friendsSlider.oninput = function() {
@@ -70,25 +70,24 @@ financeSlider.oninput = function() {
 }
 
 
-submit.onclick = function () {
-    fetch("http://localhost:5050/create", { 
-      
-        // Adding method type 
-        method: "POST", 
-          
-        // Adding body or contents to send 
-        body: JSON.stringify(STHObject), 
-          
-        // Adding headers to the request 
-        headers: { 
-            "Content-type": "application/json"
-        } 
-    }) .then(res => alert("Data recorded")); 
-      
-  /*   // Converting to JSON 
-    .then(response => response.json()) 
-      
-    // Displaying results to console 
-    .then(json => console.log(json));  */
-}
+submit.onclick = function() {
+    fetch("http://localhost:5050/create", {
 
+        // Adding method type 
+        method: "POST",
+
+        // Adding body or contents to send 
+        body: JSON.stringify(STHObject),
+
+        // Adding headers to the request 
+        headers: {
+            "Content-type": "application/json"
+        }
+    }).then(res => alert("Data recorded"));
+
+    /*   // Converting to JSON 
+      .then(response => response.json()) 
+        
+      // Displaying results to console 
+      .then(json => console.log(json));  */
+}
