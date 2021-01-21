@@ -24,7 +24,15 @@ fitnessOutput.innerHTML = fitness.value;
 faithOutput.innerHTML = faith.value;
 financeOutput.innerHTML = financeSlider.value;
 
-const STHObject = {};
+const STHObject = {
+    friends:"5",
+    family:"5",
+    field:"5",
+    fun:"5",
+    fitness:"5",
+    faith:"5",
+    finance:"5"
+};
 
 friendsSlider.oninput = function() {
     friendsOutput.innerHTML = this.value;
@@ -61,6 +69,7 @@ financeSlider.oninput = function() {
     STHObject.finance = this.value;
 }
 
+
 submit.onclick = function () {
     fetch("http://localhost:5050/create", { 
       
@@ -72,14 +81,14 @@ submit.onclick = function () {
           
         // Adding headers to the request 
         headers: { 
-            "Content-type": "application/json; charset=UTF-8"
+            "Content-type": "application/json"
         } 
-    }) 
+    }) .then(res => alert("Data recorded")); 
       
-    // Converting to JSON 
+  /*   // Converting to JSON 
     .then(response => response.json()) 
       
     // Displaying results to console 
-    .then(json => console.log(json)); 
+    .then(json => console.log(json));  */
 }
 
