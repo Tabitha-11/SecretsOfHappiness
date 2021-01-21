@@ -1,0 +1,53 @@
+.heading {
+    display: flex;
+    background-color: black;
+    color: blanchedalmond;
+    padding: 40px;
+    justify-content: center;
+}
+
+.slidecontainer {
+    display: flex;
+    flex-direction: column;
+    font-size: xx-large;
+    align-items: flex-start;
+    align-content: center;
+    width: 50rem;
+    margin: auto;
+    padding: 10rem;
+    margin-left: 34rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.original {
+    align-items: center;
+}
+
+.btn {
+    background-color: green;
+    color: white;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    outline: none;
+    border-width: inherit;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 120px;
+}
+
+.link {
+    float: right;
+    font-size: 30px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.h11 {
+    display: flex;
+    flex-direction: column;
+}

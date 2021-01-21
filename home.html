@@ -1,48 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SecretToHappinesss</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>SecretToHappinesss</h1>
+    <h1 class="heading">SecretToHappinesss</h1>
+    <div class="original">
+        <a class="link" href="./dashboard.html">Go to Dashboard</a>
 
-    <div class="slidecontainer">
-        <p>1.Friends</p>
-        <input type="range" min="1" max="10" value="5" id="Friends">
-        <p>Value: <span id="demo1"></span></p>
+        <div class="slidecontainer">
+            <div>
+                <label>Friends</label>
+                <input type="range" min="1" max="10" value="5" id="Friends">
+                <label>Value: <span id="demo1"></span></label>
+            </div>
+            <br>
+            <div>
+                <label>Family</label>
+                <input type="range" min="1" max="10" value="5" id="Family">
+                <label>Value: <span id="demo2"></span></label>
+            </div>
+            <br>
+            <div>
+                <label>Field</label>
+                <input type="range" min="1" max="10" value="5" id="Field">
+                <label>Value: <span id="demo3"></span></label>
+            </div>
+            <br>
+            <div>
+                <label>Fun</label>
+                <input type="range" min="1" max="10" value="5" id="Fun">
+                <label>Value: <span id="demo4"></span></label>
+            </div>
+            <br>
+            <div>
+                <label>Fitness</label>
+                <input type="range" min="1" max="10" value="5" id="Fitness">
+                <label>Value: <span id="demo5"></span></label>
+            </div>
+            <br>
+            <div>
+                <label>Faith</label>
+                <input type="range" min="1" max="10" value="5" id="Faith">
+                <label>Value: <span id="demo6"></span></label>
+            </div>
+            <br>
+            <div>
+                <label>Finance</label>
+                <input type="range" min="1" max="10" value="5" id="Finance">
+                <label>Value: <span id="demo7"></span></label>
+            </div>
 
-        <p>2.Family</p>
-        <input type="range" min="1" max="10" value="5" id="Family">
-        <p>Value: <span id="demo2"></span></p>
-        
-        <p>3.Field</p>
-        <input type="range" min="1" max="10" value="5" id="Field">
-        <p>Value: <span id="demo3"></span></p>
-
-        <p>4.Fun</p>
-        <input type="range" min="1" max="10" value="5" id="Fun">
-        <p>Value: <span id="demo4"></span></p>
-
-        <p>5.Fitness</p>
-        <input type="range" min="1" max="10" value="5" id="Fitness">
-        <p>Value: <span id="demo5"></span></p>
-
-        <p>6.Faith</p>
-        <input type="range" min="1" max="10" value="5" id="Faith">
-        <p>Value: <span id="demo6"></span></p>
-
-        <p>7.Finance</p>
-        <input type="range" min="1" max="10" value="5" id="Finance">
-        <p>Value: <span id="demo7"></span></p>
-
-        <input type="button" value="Submit" id="Submit">
-<br><br>
-        <a href="./dashboard.html">Go to Dashboard</a>
+            <button class="btn" type="submit" id="Submit"><h3>Submit</h3></button>
 
         </div>
+    </div>
 
-        <script src="./home-handler.js"></script>
+
+    <script src="./home-handler.js"></script>
+
 </body>
+
 </html>
