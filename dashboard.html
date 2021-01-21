@@ -1,36 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STH Dashboard</title>
-    <script>
-    function receive() {
-
-fetch("http://localhost:5050/receive", { 
-  
-    // Adding method type 
-    method: "GET", 
-       
-    // Adding headers to the request 
-    headers: { 
-        "Content-type": "application/json"
-    } 
-})  
-.then(response => response.json()) 
-  
-
-.then(json => console.log(json)); 
-
-}
-</script>
-</head>
-<body onload="receive()">
     <h1>Dashboard</h1>
+    <table>
+        <tr>
+            <td>S.no</td>
+            <td>Date</td>
+            <td>Friends</td>
+            <td>Family</td>
+            <td>Field</td>
+            <td>Fun</td>
+            <td>Fitness</td>
+            <td>Faith</td>
+            <td>Finance</td>
+        </tr>
 
-    <input type="button" value="Submit" id="Submit">
+    </table>
+    <script>
+        async function receive() {
+
+            let data = await fetch("http://localhost:5050/receive", {
+
+                    // Adding method type 
+                    method: "GET",
+
+                    // Adding headers to the request 
+                    headers: {
+                        "Content-type": "application/json"
+                    }
+                })
+                .then(response => response.json())
+
+            const myObj = Object.values(data.Data)
+            console.log(typeof(myObj[0]))
+            console.log(myObj[0])
+            let txt = "";
+            txt += "<table border='1'>"
+            let i = 1;
+            for (x in myObj) {
+
+                txt += "<tr><td>" + i + "</td>";
+                txt += "<td>" + myObj[x].date + "</td>";
+                txt += "<td>" + myObj[x].friends + "</td>";
+                txt += "<td>" + myObj[x].family + "</td>";
+                txt += "<td>" + myObj[x].field + "</td>";
+                txt += "<td>" + myObj[x].fun + "</td>";
+                txt += "<td>" + myObj[x].fitness + "</td>";
+                txt += "<td>" + myObj[x].faith + "</td>";
+                txt += "<td>" + myObj[x].finance + "</td></tr>";
+
+                i++;
+            }
+            document.getElementById("demo").innerHTML = txt
+
+
+            // .then(json => console.log(json)); 
+
+        }
+    </script>
+</head>
+
+<body onload="receive()">
+
+    <p id="demo"></p>
+
+
+
 
 
 
 </body>
+
 </html>
